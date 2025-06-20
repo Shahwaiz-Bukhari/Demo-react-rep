@@ -1,0 +1,112 @@
+#footer {
+    width: 100%;
+    background-color: #0d0d0d;
+    color: #fff;
+    z-index: 9;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 4vw 3vw;
+    position: relative; 
+    height: auto;
+    box-sizing: border-box;
+    padding-bottom: 0px;
+    padding-top: 125px;
+    overflow: hidden;
+}
+
+#footer h1 {
+    font-size: 23vw;
+    margin: 0;
+    line-height: 1;
+}
+
+#footer-div {
+    height: 35vh;
+    width: 100%;
+    background: radial-gradient(circle at center, #0737e3 0%, #0d0d0d 60%);
+    filter: blur(40px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    animation: pulseGradient 8s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGradient {
+    0% {
+        transform: scale(1);
+        filter: blur(40px);
+    }
+    100% {
+        transform: scale(1.2);
+        filter: blur(60px);
+    }
+}
+
+#footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+    font-size: 0.9vw;
+    font-weight: 300;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+#footer-bottom p,
+#footer-bottom a {
+    margin: 0;
+    opacity: 0.8;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footer-bottom a:hover,
+#footer-bottom a:focus {
+    color: #0737e3;
+}
+
+@media (max-width: 1024px) {
+    #footer h1 {
+        font-size: 18vw;
+    }
+    #footer-bottom {
+        font-size: 1.2vw;
+        flex-direction: column;
+        height: auto;
+        padding: 1vw 0;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    #footer-bottom p,
+    #footer-bottom a {
+        font-size: 1.2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer h1 {
+        font-size: 20vw;
+    }
+    #footer-bottom {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer h1 {
+        font-size: 22vw;
+    }
+    #footer-bottom {
+        flex-direction: column;
+        font-size: 4vw;
+        gap: 0.25rem;
+    }
+}
+

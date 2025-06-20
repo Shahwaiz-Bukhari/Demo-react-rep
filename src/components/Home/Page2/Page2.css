@@ -1,0 +1,118 @@
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 2vw 0;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #0d0d0d;
+    margin-top: -2px;
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+    font-size: 9vw;
+    display: inline-block;
+    color: #EFEAE3;
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #0737E3;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom {
+    height: auto;
+    width: 100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+    padding-top: 13vw;
+}
+
+#page2-bottom h1 {
+    font-size: 3vw;
+    width: 60%;
+    line-height: 3.2vw;
+    color:#EFEAE3;
+}
+
+#bottom-part2 {
+    width: 20%;
+}
+
+#bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p {
+    font-weight: 200;
+    margin-top: 1vw;
+    font-size: 1.5vw;
+    color: #EFEAE3;
+    font-family: Syne, sans-serif;
+}
+
+
+#page2 #gooey {
+    height: 20vw;
+    width: 20vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #1246ff, #0737e3);
+    top: 50%;
+    left: 20%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
