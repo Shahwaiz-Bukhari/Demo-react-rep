@@ -39,7 +39,7 @@ export default function App() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <Router>
+    <Router basename="/Demo-react-rep">
       {loaderVisible && <Loader />}
       <div
         id="fixed-image"
