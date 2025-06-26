@@ -26,8 +26,7 @@ const clients = [
     name: 'OZ SPORTS',
     description: `We collaborate with OZ Sports to enhance their digital footprint through tailored web solutions 
                   that reflect their innovative approach to sports broadcasting.Our partnership ensures their 
-                  online presence keeps pace with the high-performance, forward-thinking technology they deliver on 
-                  the field.`,
+                  online presence keeps pace with the high-performance, forward-thinking technology they deliver on field.`,
   },
   {
     logo: beamLogo,
