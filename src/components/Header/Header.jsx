@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FullScreenMenu from '../Menu/FullScreenMenu';
 import './Header.css';
-import logo from './assets/logo.png';
+import logo from '../../assets/logo.png';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
