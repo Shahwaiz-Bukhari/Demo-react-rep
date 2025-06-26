@@ -9,7 +9,7 @@ import Contact from './components/Contact/Contact';
 import Work from './components/Work/Work';
 import Studio from './components/Studio/Studio';
 import NotFound from './components/Error/NotFound';
-import './index.css';
+import './Index.css';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import {
   setupLoader,
