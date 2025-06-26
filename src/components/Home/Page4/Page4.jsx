@@ -60,22 +60,36 @@ export default function Page4() {
     const swiperSlides = swiperEl.querySelectorAll('.swiper-slide');
     const totalSlides = swiperSlides.length;
 
-    const scrollTween = gsap.to(swiperSlides, {
-      xPercent: -100 * (totalSlides - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#page4',
-        start: 'top top',
-        end: () => `+=${swiperEl.offsetWidth}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-      },
-    });
+    ScrollTrigger.matchMedia({
+    // Desktop (min-width 601px)
+    "(min-width: 601px)": function () {
+      const scrollTween = gsap.to(swiperSlides, {
+        xPercent: -100 * (totalSlides - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#page4',
+          start: 'top top',
+          end: () => `+=${swiperEl.offsetWidth}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+
+      return () => scrollTween.scrollTrigger?.kill();
+    },
+
+    // Mobile (max-width 600px)
+    "(max-width: 600px)": function () {
+      // Optional: you can disable ScrollTrigger for mobile or apply vertical effects
+      // This leaves the swiper as a normal scrollable section on mobile
+    },
+  });
+
 
     return () => {
-      scrollTween.scrollTrigger?.kill();
-    };
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  };
   }, []);
 
   return (

@@ -75,7 +75,7 @@ html, body {
 
 
     #center {
-        height: 76vh;
+        height: 52vh;
         width: 100%;
         display: flex;
         align-items: flex-start;
@@ -120,6 +120,7 @@ html, body {
         background-color: #0d0d0d;
         padding: 8vw 0;
         position: relative;
+        padding-bottom: 0;
     }
 
     #moving-text {
@@ -155,7 +156,7 @@ html, body {
     }
 
     #page2-bottom {
-        height: 90vh;
+        height: 70vh;
         width: 100%;
         padding: 5vw 4vw;
         display: flex;
@@ -327,6 +328,7 @@ html, body {
     width: 80%;
     padding: 1rem;
     font-size: 0.8rem;
+    padding-top: 0;
   }
 
   .logo-wrapper {
@@ -337,10 +339,16 @@ html, body {
   #fixed-image {
     display: none;
   }
+   #page3{
+    padding: 8vw 4vw;
+    padding-top: 0;
+    height: 70%;
+   }
 
-  #page3,
   #page4 {
     padding: 8vw 4vw;
+    padding-top: 0;
+    height: 100%;
   }
 
   #footer h1 {

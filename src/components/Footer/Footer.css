@@ -100,6 +100,9 @@
 }
 
 @media (max-width: 480px) {
+    #footer {
+        padding-top: 220px;
+    }
     #footer h1 {
         font-size: 22vw;
     }
