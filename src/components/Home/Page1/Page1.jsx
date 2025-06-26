@@ -1,5 +1,6 @@
 import React from 'react';
 import './Page1.css';
+import video from './assets/video.mp4';
 
 
 
@@ -29,7 +30,7 @@ export default function Page1() {
         <div id="hero-3"></div>
       </div>
 
-      <video autoPlay loop muted playsInline src="video.mp4" />
+      <video src={video} autoPlay loop muted playsInline />
     </section>
   );
 }

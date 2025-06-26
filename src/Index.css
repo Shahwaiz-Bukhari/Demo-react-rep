@@ -7,13 +7,13 @@
 @font-face {
     font-family: 'Syne';
     font-weight: 100;
-    src: url('src/assets/fonts/Syne-Regular.ttf') format('truetype');
+    src: url('src/assets/Syne-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: neu;
     font-weight: 200;
-    src: url('./NeueHaasDisplayRoman.ttf');
+    src: url('src/assets/NeueHaasDisplayRoman.ttf');
 }
 
 * {
