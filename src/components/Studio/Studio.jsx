@@ -26,7 +26,7 @@ function Studio() {
           <div className="team-grid">
             <div className="team-member" tabIndex={0}>
               <img
-                src="/images/basitbhai.jpeg"
+                src="./images/basitbhai.jpeg"
                 alt="Abdul Basit, CEO"
                 className="team-member-image"
                 loading="lazy"
@@ -36,7 +36,7 @@ function Studio() {
             </div>
             <div className="team-member" tabIndex={0}>
               <img
-                src="/images/shafiqbhai.jpeg"
+                src="./images/shafiqbhai.jpeg"
                 alt="Shafique, Lead Designer"
                 className="team-member-image"
                 loading="lazy"
@@ -46,7 +46,7 @@ function Studio() {
             </div>
             <div className="team-member" tabIndex={0}>
               <img
-                src="/images/asfand.jpeg"
+                src="./images/asfand.jpeg"
                 alt="Asfand Yar, Software Engineer"
                 className="team-member-image"
                 loading="lazy"

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Contact.css';
+import NightMap from '../Map/NightMap';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -128,6 +129,9 @@ export default function ContactSection() {
 
             <button type="submit">Submit</button>
           </form>
+        </div>
+        <div className="maps">
+          <NightMap />
         </div>
       </section>
     </>

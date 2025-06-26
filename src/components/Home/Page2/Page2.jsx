@@ -29,11 +29,11 @@ export default function Page2() {
             src={imgfix}
             alt="Person holding a camera, artistic studio shot"
           />
-          <p>
+          {/* <p>
             We love to create, we love to solve, we love to collab, and we love to turn ideas into
             reality. We’re here to partner with you through every step of the process and know that bonds are
             the most important things we build.
-          </p>
+          </p> */}
         </div>
       </div>
       <div id="gooey"></div>

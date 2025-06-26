@@ -74,11 +74,11 @@
 
 @media (max-width: 1024px) {
     #footer h1 {
-        font-size: 18vw;
+        font-size: 23vw;
     }
     #footer-bottom {
         font-size: 1.2vw;
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 1vw 0;
         gap: 0.5rem;
@@ -86,13 +86,13 @@
     }
     #footer-bottom p,
     #footer-bottom a {
-        font-size: 1.2vw;
+        font-size: 1.7vw;
     }
 }
 
 @media (max-width: 768px) {
     #footer h1 {
-        font-size: 20vw;
+        font-size: 23.5vw;
     }
     #footer-bottom {
         font-size: 3vw;

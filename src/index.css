@@ -21,7 +21,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: neu, sans-serif;
-    /* background-color: #0d0d0d; */
 }
 
 html, body {
@@ -33,9 +32,6 @@ html, body {
     position: relative;
     z-index: 10;
 }
-
-
-
 
 #full-scr {
     height: 100vh;
@@ -64,33 +60,22 @@ html, body {
     }
 
     nav {
-        padding: 2vw 5vw;
+        padding: 5vw 5vw;
         background-color: #0d0d0d;
     }
 
     nav img {
         transition: all ease 0.2s;
-        height: 2vh;
+        height: 2.5vh;
     }
 
     #nav-part2 {
         display: none;
     }
 
-    nav h3.menuToggle {
-        display: block;
-        padding: 3vw 5vw;
-        border: 1px solid #ababab;
-        border-radius: 50px;
-        font-size: 4vw;
-        font-weight: 200;
-        padding-left: 5vw;
-        margin-right: 13px;
-        color: #EFEAE3;
-    }
 
     #center {
-        height: 62vh;
+        height: 76vh;
         width: 100%;
         display: flex;
         align-items: flex-start;
@@ -104,6 +89,7 @@ html, body {
     }
 
     #left h3 {
+      padding-top: 12px;
         width: 80%;
         font-size: 5.5vw;
         line-height: 6vw;
@@ -274,6 +260,9 @@ html, body {
     #loader h1 {
         font-size: 9vw;
     }
+    #footer-bottom p{
+      font-size: 2vw;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -355,11 +344,13 @@ html, body {
   }
 
   #footer h1 {
-    font-size: 20vw;
+    font-size: 23.5vw;
   }
 
   #footer-bottom {
     font-size: 3vw;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -373,9 +364,12 @@ html, body {
   }
 
   #footer h1 {
-    font-size: 22vw;
+    font-size: 24vw;
   }
 
+#footer-bottom p{
+    font-size: 2.5vw;
+}
   .logo-wrapper {
     width: 60px;
     height: 60px;

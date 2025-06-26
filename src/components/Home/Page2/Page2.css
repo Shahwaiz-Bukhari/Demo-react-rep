@@ -62,6 +62,7 @@
     position: relative;
     z-index: 9;
     padding-top: 13vw;
+    padding-right: 20vw;
 }
 
 #page2-bottom h1 {
@@ -69,6 +70,7 @@
     width: 60%;
     line-height: 3.2vw;
     color:#EFEAE3;
+    font-family: Syne, sans-serif;
 }
 
 #bottom-part2 {
@@ -76,17 +78,17 @@
 }
 
 #bottom-part2 img {
-    width: 100%;
+    width: 145%;
     border-radius: 15px;
 }
 
-#bottom-part2 p {
+/* #bottom-part2 p {
     font-weight: 200;
     margin-top: 1vw;
     font-size: 1.5vw;
     color: #EFEAE3;
     font-family: Syne, sans-serif;
-}
+} */
 
 
 #page2 #gooey {

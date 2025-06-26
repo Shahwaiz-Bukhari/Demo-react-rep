@@ -1,6 +1,5 @@
 import React from 'react';
 import './Work.css';
-// import imgProj from '/images/proj1.jpg';
 
 function Work() {
   const projects = [
@@ -8,21 +7,21 @@ function Work() {
       id: 1,
       title: 'Project Alpha',
       description: 'A modern web application with interactive features.',
-      img: '/images/proj1.jpg',
+      img: './images/proj1.jpg',
       alt: 'Screenshot of Project Alpha web application interface'
     },
     {
       id: 2,
       title: 'Project Beta',
       description: 'Mobile app with intuitive UX and performance optimizations.',
-      img: '/images/proj2.jpg',
+      img: './images/proj2.jpg',
       alt: 'Screenshot of Project Beta mobile app UI'
     },
     {
       id: 3,
       title: 'Project Gamma',
       description: 'Enterprise-grade scalable architecture and integrations.',
-      img: '/images/proj3.jpg',
+      img: './images/proj3.jpg',
       alt: 'Diagram depicting Project Gamma system architecture'
     },
   ];

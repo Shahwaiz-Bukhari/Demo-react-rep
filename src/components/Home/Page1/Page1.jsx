@@ -6,6 +6,7 @@ import './Page1.css';
 export default function Page1() {
   return (
     <section id="page1" className="page1" data-scroll-section>
+      
       <div id="center">
         <div id="left">
           <h3>
@@ -28,7 +29,7 @@ export default function Page1() {
         <div id="hero-3"></div>
       </div>
 
-      <video autoPlay loop muted playsInline src="/video.mp4" />
+      <video autoPlay loop muted playsInline src="video.mp4" />
     </section>
   );
 }

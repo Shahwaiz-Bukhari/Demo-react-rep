@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'swiper/css';
 import './Page4.css';
 
@@ -8,6 +10,8 @@ import ozLogo from '/images/img2.png';
 import beamLogo from '/images/img3.png';
 import sothebysLogo from '/images/img4.png';
 import outpostLogo from '/images/img5.png';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const clients = [
   {
@@ -49,24 +53,50 @@ const clients = [
 ];
 
 export default function Page4() {
+  const swiperRef = useRef();
+
+  useEffect(() => {
+    const swiperEl = swiperRef.current;
+    const swiperSlides = swiperEl.querySelectorAll('.swiper-slide');
+    const totalSlides = swiperSlides.length;
+
+    const scrollTween = gsap.to(swiperSlides, {
+      xPercent: -100 * (totalSlides - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#page4',
+        start: 'top top',
+        end: () => `+=${swiperEl.offsetWidth}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+      },
+    });
+
+    return () => {
+      scrollTween.scrollTrigger?.kill();
+    };
+  }, []);
+
   return (
     <section id="page4" data-scroll-section>
-      <Swiper
-        slidesPerView="auto"
-        centeredSlides={false}
-        spaceBetween={100}
-        className="mySwiper"
-      >
-        {clients.map((client, idx) => (
-          <SwiperSlide key={idx} className="swiper-slide">
-            <div className="logo-wrapper">
-              <img src={client.logo} alt={client.name} />
-            </div>
-            <p>{client.description}</p>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="swiper-scroll-wrapper" ref={swiperRef}>
+        <Swiper
+          slidesPerView="auto"
+          centeredSlides={false}
+          spaceBetween={100}
+          className="mySwiper"
+        >
+          {clients.map((client, idx) => (
+            <SwiperSlide key={idx} className="swiper-slide">
+              <div className="logo-wrapper">
+                <img src={client.logo} alt={client.name} />
+              </div>
+              <p>{client.description}</p>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
-
