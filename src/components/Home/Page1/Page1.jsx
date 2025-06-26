@@ -1,6 +1,6 @@
 import React from 'react';
 import './Page1.css';
-import video from '../../assets/video.mp4';
+import video from '../../../assets/video.mp4';
 
 
 
