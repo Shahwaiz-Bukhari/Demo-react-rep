@@ -34,7 +34,7 @@ export default function App() {
   // }, [loaderVisible]);
 
   return (
-    <Router basename="/Demo-react-rep">
+    <Router>
       {loaderVisible && <Loader />}
       <div
         id="fixed-image"
