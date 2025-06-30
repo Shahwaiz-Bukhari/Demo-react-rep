@@ -21,7 +21,7 @@ nav.scrolled {
   gap: 1vw;
 }
 
-/* General link styles */
+
 .nav-link {
   color: #EFEAE3;
   text-decoration: none;
@@ -37,7 +37,6 @@ nav.scrolled {
   overflow: hidden;
 }
 
-/* Hover background animation */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -51,7 +50,7 @@ nav.scrolled {
   z-index: -1;
 }
 
-/* Only apply hover effect if not active */
+
 .nav-link:not(.active-link):hover::after {
   bottom: 0;
   border-radius: 0;
@@ -61,13 +60,13 @@ nav.scrolled {
   color: #000000bb;
 }
 
-/* Active link styling */
+
 .active-link {
   background-color: white;
   color: black !important;
 }
 
-/* Hamburger styles */
+
 #hamburger {
   width: 30px;
   height: 22px;
@@ -97,7 +96,6 @@ nav.scrolled {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive: Hide nav items, show hamburger */
 @media (max-width: 600px) {
   #hamburger {
     display: flex;

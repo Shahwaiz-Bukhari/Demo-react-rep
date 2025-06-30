@@ -91,7 +91,6 @@ export default function Page4() {
         scrub: 1,
         pin: true,
         anticipatePin: 1,
-        markers:true,
       },
     });
 
