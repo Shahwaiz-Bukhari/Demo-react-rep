@@ -20,11 +20,13 @@ export default function FullScreenMenu() {
         <span></span>
       </div>
 
+      <div className={`menu-overlay ${open ? 'show' : ''}`}></div>
+
       <div className={`full-screen-menu ${open ? 'open' : ''}`}>
         <nav className="menu-nav">
           <ul>
-            {menuItems.map(({ label, href }) => (
-              <li key={label}>
+            {menuItems.map(({ label, href }, i) => (
+              <li key={label} style={{ animationDelay: `${i * 0.15}s` }}>
                 <a href={href} onClick={closeMenu}>
                   {label}
                 </a>
@@ -39,28 +41,28 @@ export default function FullScreenMenu() {
 
       <style jsx="true">{`
         #menu {
-          position: fixed;
+          position: absolute;
           top: 30px;
           right: 30px;
           width: 40px;
           height: 30px;
-          cursor: pointer;
-          z-index: 10001;
+          z-index: 10002;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          cursor: pointer;
         }
 
         #menu span {
-          height: 4px;
+          height: 3px;
           width: 100%;
-          background: white;
-          border-radius: 4px;
-          transition: 0.4s;
+          background: #ffffffdd;
+          border-radius: 3px;
+          transition: all 0.4s ease;
         }
 
         #menu.clicked span:nth-child(1) {
-          transform: translateY(13px) rotate(45deg);
+          transform: rotate(45deg) translate(6px, 6px);
         }
 
         #menu.clicked span:nth-child(2) {
@@ -68,13 +70,29 @@ export default function FullScreenMenu() {
         }
 
         #menu.clicked span:nth-child(3) {
-          transform: translateY(-13px) rotate(-45deg);
+          transform: rotate(-45deg) translate(6px, -6px);
         }
 
-        @media (min-width: 600px) {
-          #menu {
-            display: none;
-          }
+        
+        .menu-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(20, 20, 20, 0.7);
+          backdrop-filter: blur(12px);
+          z-index: 10000;
+          opacity: 0;
+          transform: scale(0.9);
+          transition: all 0.5s ease;
+          pointer-events: none;
+        }
+
+        .menu-overlay.show {
+          opacity: 1;
+          transform: scale(1);
+          pointer-events: auto;
         }
 
         .full-screen-menu {
@@ -83,28 +101,27 @@ export default function FullScreenMenu() {
           left: 0;
           width: 100vw;
           height: 100vh;
-          background: rgba(10, 10, 10, 0.95);
-          backdrop-filter: blur(10px);
+          z-index: 10001;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          color: white;
-          transform: translateY(-100%);
-          transition: transform 0.5s ease-in-out;
-          z-index: 10000;
+          opacity: 0;
           pointer-events: none;
+          transition: opacity 0.5s ease;
+          font-family: 'Poppins', sans-serif;
         }
 
         .full-screen-menu.open {
-          transform: translateY(0);
+          opacity: 1;
           pointer-events: auto;
         }
 
         .menu-nav {
-          flex-grow: 1;
+          flex-grow: 0;
           display: flex;
           align-items: center;
+          background: transparent;
         }
 
         .menu-nav ul {
@@ -116,16 +133,19 @@ export default function FullScreenMenu() {
 
         .menu-nav li {
           margin: 2rem 0;
+          opacity: 0;
+          transform: translateY(30px);
+          animation: fadeInUp 0.5s forwards ease;
         }
 
         .menu-nav a {
           font-size: 3rem;
+          font-weight: 500;
           color: white;
           text-decoration: none;
-          font-weight: 600;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.1em;
           position: relative;
-          transition: color 0.3s ease;
+          transition: color 0.4s ease;
         }
 
         .menu-nav a::after {
@@ -134,14 +154,14 @@ export default function FullScreenMenu() {
           bottom: -8px;
           left: 50%;
           transform: translateX(-50%);
-          width: 0;
-          height: 3px;
-          background: #00bfff;
-          transition: width 0.3s ease;
+          width: 0%;
+          height: 2px;
+          background-color: #ffd6a5;
+          transition: width 0.4s ease;
         }
 
         .menu-nav a:hover {
-          color: #00bfff;
+          color: #ffd6a5;
         }
 
         .menu-nav a:hover::after {
@@ -149,27 +169,38 @@ export default function FullScreenMenu() {
         }
 
         .menu-footer {
-          position: absolute;
-          bottom: 30px;
           font-size: 1rem;
-          opacity: 0.7;
+          opacity: 0.5;
+          margin-bottom: 30px;
           text-align: center;
         }
 
+        @keyframes fadeInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+          @media (min-width: 601px){
+          #menu {
+          display: none;
+          }
+          }
+
         @media (max-width: 600px) {
           #menu {
-            width: 32px;
-            height: 24px;
-            top: 22px;
+            top: 20px;
             right: 20px;
+            width: 25px;
+            height: 20px;
           }
 
           .menu-nav a {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
           }
 
           .menu-footer {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
           }
         }
       `}</style>

@@ -67,6 +67,7 @@ html, body {
     nav img {
         transition: all ease 0.2s;
         height: 2.5vh;
+        padding-top: 1vw;
     }
 
     #nav-part2 {
@@ -298,6 +299,17 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  body{
+    background: #0d0d0d;
+  }
+
+  #center{
+      height: 40vh;
+  }
+  #bottom-part2 img {
+    padding-top: 135%;
+    width: 170%;
+  }
   .elem {
     flex-direction: column;
     align-items: flex-start;

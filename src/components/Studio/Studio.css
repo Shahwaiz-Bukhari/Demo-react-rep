@@ -108,6 +108,13 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  .about-section,
+  .team-section{
+    background: #0d0d0d;
+  }
+  
+}
 
 @media (max-width: 640px) {
   .studio-page {

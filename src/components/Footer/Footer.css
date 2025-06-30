@@ -91,6 +91,9 @@
 }
 
 @media (max-width: 768px) {
+    #footer {
+        padding-top: 205px;
+    }
     #footer h1 {
         font-size: 23.5vw;
     }
@@ -105,7 +108,7 @@
         padding-bottom: 20px;
     }
     #footer h1 {
-        font-size: 22vw;
+        font-size: 24.5vw;
     }
     #footer-bottom {
         flex-direction: column;

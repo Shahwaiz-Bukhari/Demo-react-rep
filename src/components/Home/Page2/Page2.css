@@ -118,3 +118,10 @@
         transform: translate(-10%, 10%) skew(-12deg);
     }
 }
+
+@media (max-width: 768px) {
+    #page2 #gooey {
+        display: none;
+    }
+    
+}

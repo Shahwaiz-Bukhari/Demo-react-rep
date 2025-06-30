@@ -131,6 +131,12 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  .btn-icon{
+    background: bottom;
+  }
+  
+}
 
 @media (max-width: 640px) {
   .work-page {

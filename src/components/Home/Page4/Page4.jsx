@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'swiper/css';
 import './Page4.css';
+import Arrow from './Arrow.jsx';
 
 import tayyabsLogo from '/images/img1.png';
 import ozLogo from '/images/img2.png';
@@ -60,28 +61,45 @@ export default function Page4() {
     const totalSlides = swiperSlides.length;
 
     ScrollTrigger.matchMedia({
-    // Desktop (min-width 601px)
-    "(min-width: 601px)": function () {
-      const scrollTween = gsap.to(swiperSlides, {
-        xPercent: -100 * (totalSlides - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#page4',
-          start: 'top top',
-          end: () => `+=${swiperEl.offsetWidth}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-        },
-      });
+  
+  "(min-width: 769px)": function () {
+    const scrollTween = gsap.to(swiperSlides, {
+      xPercent: -100 * (totalSlides - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#page4',
+        start: 'top top',
+        end: () => `+=${swiperEl.offsetWidth}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+      },
+    });
 
-      return () => scrollTween.scrollTrigger?.kill();
-    },
+    return () => scrollTween.scrollTrigger?.kill();
+  },
 
-    // Mobile (max-width 600px)
+  
+  "(max-width: 768px)": function () {
+    const scrollTween = gsap.to(swiperSlides, {
+      xPercent: -100 * (totalSlides - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#page4',
+        start: 'top-=400 top',
+        end: () => `+=${swiperEl.scrollWidth}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        markers:true,
+      },
+    });
+
+    return () => scrollTween.scrollTrigger?.kill();
+  },
+
     "(max-width: 600px)": function () {
-      // Optional: you can disable ScrollTrigger for mobile or apply vertical effects
-      // This leaves the swiper as a normal scrollable section on mobile
+      
     },
   });
 
@@ -91,7 +109,9 @@ export default function Page4() {
   };
   }, []);
 
-  return (
+  return ( 
+    <>
+    <Arrow/>
     <section id="page4" data-scroll-section>
       <div className="swiper-scroll-wrapper" ref={swiperRef}>
         <Swiper
@@ -111,5 +131,6 @@ export default function Page4() {
         </Swiper>
       </div>
     </section>
+    </>
   );
 }

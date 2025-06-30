@@ -201,10 +201,11 @@ button:focus {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
     padding: 24px 16px;
+    background: #0d0d0d;
   }
 
 p {

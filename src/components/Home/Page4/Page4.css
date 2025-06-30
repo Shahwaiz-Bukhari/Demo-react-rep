@@ -67,6 +67,50 @@
   max-height: 100%;
   object-fit: contain;
 }
+@media (max-width: 768px){
+  #page4 {
+    height: 100vh;
+    flex-direction: column;
+    padding: 10vw 4vw;
+    align-items: flex-start;
+  }
+
+  .swiper-scroll-wrapper {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 65px;
+  }
+
+  .swiper {
+    height: auto;
+  }
+
+  .swiper-slide {
+    width: 41% !important;
+    border-left: none;
+    border-bottom: 1px solid #aeadad;
+    padding: 4vw 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .swiper-slide p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .logo-wrapper {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 3vw;
+  }
+
+  .logo-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 @media (max-width: 600px) {
   #page4 {
