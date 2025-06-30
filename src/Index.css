@@ -1,21 +1,23 @@
 @font-face {
-    font-family: neu;
-    src: url('./NeueHaasDisplayMediu.ttf');
-}
-
-
-@font-face {
-    font-family: 'Syne';
-    font-weight: 100;
-    src: url('src/assets/Syne-Regular.ttf') format('truetype');
+  font-family: 'neu';
+  src: url('/fonts/NeueHaasDisplay-Mediu.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: neu;
-    font-weight: 200;
-    src: url('src/assets/NeueHaasDisplayRoman.ttf');
+  font-family: 'neu';
+  src: url('/fonts/NeueHaasDisplay-Roman.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Syne';
+  src: url('/fonts/Syne-Regular.ttf') format('truetype');
+  font-weight: 50;
+  font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +28,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    font-family: 'neu', sans-serif;
 }
 
 #main {
@@ -277,7 +280,7 @@ html, body {
   }
 
   #footer h1 {
-    font-size: 18vw;
+    font-size: 23.5vw;
   }
 
   .swiper-slide {
@@ -291,7 +294,6 @@ html, body {
 
   #footer-bottom {
     font-size: 1.2vw;
-    flex-direction: column;
     height: auto;
     padding: 1vw 0;
     gap: 0.5rem;
