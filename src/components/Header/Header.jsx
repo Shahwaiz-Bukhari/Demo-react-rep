@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import FullScreenMenu from '../Menu/FullScreenMenu';
 import './Header.css';
 import logo from '../../assets/logo.png';
@@ -15,25 +15,41 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <nav className={scrolled ? 'scrolled' : ''}>
-      <Link to="/"  aria-label="Go to home page">
-    <img
-      src={logo}
-      alt="Bricksol logo"
-      style={{ cursor: 'pointer' }}
-    />
-    </Link>
+      <NavLink to="/" aria-label="Go to home page">
+        <img
+          src={logo}
+          alt="Bricksol logo"
+          style={{ cursor: 'pointer' }}
+        />
+      </NavLink>
       <div id="nav-part2">
-        <h4>
-          <Link to="/work" >Work</Link>
-        </h4>
-        <h4>
-          <Link to="/studio" >Studio</Link>
-        </h4>
-        <h4>
-          <Link to="/contact" >Contact</Link>
-        </h4>
+        <NavLink
+          to="/work"
+          className={({ isActive }) =>
+            isActive ? 'nav-link active-link' : 'nav-link'
+          }
+        >
+          Work
+        </NavLink>
+        <NavLink
+          to="/studio"
+          className={({ isActive }) =>
+            isActive ? 'nav-link active-link' : 'nav-link'
+          }
+        >
+          Studio
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? 'nav-link active-link' : 'nav-link'
+          }
+        >
+          Contact
+        </NavLink>
       </div>
       <FullScreenMenu />
     </nav>
