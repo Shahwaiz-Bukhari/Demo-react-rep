@@ -12,7 +12,6 @@ nav {
 
 nav.scrolled {
   background-color: #0d0d0d;
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); */
 }
 
 #nav-part2 {
@@ -29,7 +28,6 @@ nav.scrolled {
   z-index: 9;
   display: inline-block;
   padding: 10px 20px;
-  /* border: 1px solid #0000003c; */
   border-radius: 50px;
   font-weight: 500;
   font-size: 18px;
