@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'swiper/css';
 import './Page4.css';
 import Arrow from './Arrow.jsx';
+import ErrorBoundary from './ErrorBoundary'; 
 
 import tayyabsLogo from '/images/img1.png';
 import ozLogo from '/images/img2.png';
@@ -57,12 +58,13 @@ export default function Page4() {
 
   useEffect(() => {
     const swiperEl = swiperRef.current;
+    if (!swiperEl) return;
     const swiperSlides = swiperEl.querySelectorAll('.swiper-slide');
     const totalSlides = swiperSlides.length;
 
     ScrollTrigger.matchMedia({
   
-  "(min-width: 769px)": function () {
+  "(min-width: 697px)": function () {
     const scrollTween = gsap.to(swiperSlides, {
       xPercent: -100 * (totalSlides - 1),
       ease: 'none',
@@ -79,23 +81,6 @@ export default function Page4() {
     return () => scrollTween.scrollTrigger?.kill();
   },
 
-  
-  "(max-width: 768px)": function () {
-    const scrollTween = gsap.to(swiperSlides, {
-      xPercent: -100 * (totalSlides - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#page4',
-        start: 'top-=400 top',
-        end: () => `+=${swiperEl.scrollWidth}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-      },
-    });
-
-    return () => scrollTween.scrollTrigger?.kill();
-  },
 
     "(max-width: 600px)": function () {
       
@@ -109,7 +94,7 @@ export default function Page4() {
   }, []);
 
   return ( 
-    <>
+    <ErrorBoundary>
     <Arrow/>
     <section id="page4" data-scroll-section>
       <div className="swiper-scroll-wrapper" ref={swiperRef}>
@@ -130,6 +115,6 @@ export default function Page4() {
         </Swiper>
       </div>
     </section>
-    </>
+    </ErrorBoundary>
   );
 }

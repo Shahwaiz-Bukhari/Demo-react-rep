@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll';
 import Loader from './components/Loader/Loader';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -10,7 +10,7 @@ import Work from './components/Work/Work';
 import Studio from './components/Studio/Studio';
 import NotFound from './components/Error/NotFound';
 import './Index.css';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
+// import 'locomotive-scroll/dist/locomotive-scroll.css';
 import {
   setupLoader,
   handleElemMouseEnter,

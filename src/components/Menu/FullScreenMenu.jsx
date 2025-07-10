@@ -62,7 +62,7 @@ export default function FullScreenMenu() {
         }
 
         #menu.clicked span:nth-child(1) {
-          transform: rotate(45deg) translate(6px, 6px);
+          transform: rotate(45deg) translate(4px, 4px);
         }
 
         #menu.clicked span:nth-child(2) {
@@ -70,7 +70,7 @@ export default function FullScreenMenu() {
         }
 
         #menu.clicked span:nth-child(3) {
-          transform: rotate(-45deg) translate(6px, -6px);
+          transform: rotate(-45deg) translate(4px, -4px);
         }
 
         
@@ -191,8 +191,8 @@ export default function FullScreenMenu() {
           #menu {
             top: 20px;
             right: 20px;
-            width: 25px;
-            height: 20px;
+            width: 15px;
+            height: 14px;
           }
 
           .menu-nav a {

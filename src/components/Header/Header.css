@@ -4,7 +4,7 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
   z-index: 100;
   justify-content: space-between;
   background-color: #0d0d0d;
@@ -12,7 +12,7 @@ nav {
 
 nav.scrolled {
   background-color: #0d0d0d;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); */
 }
 
 #nav-part2 {
@@ -29,7 +29,7 @@ nav.scrolled {
   z-index: 9;
   display: inline-block;
   padding: 10px 20px;
-  border: 1px solid #0000003c;
+  /* border: 1px solid #0000003c; */
   border-radius: 50px;
   font-weight: 500;
   font-size: 18px;
@@ -95,13 +95,37 @@ nav.scrolled {
 #hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+@media (min-width: 601px) {
+  nav{
+    padding-bottom: 8px ; 
+  }
+  
+}
+
+@media (min-width: 1441px) {
+  .nav-link{
+    font-size: 35px;
+  }
+  .logo-img{
+    width: 12vw;
+  }
+}
 
 @media (max-width: 600px) {
-  #hamburger {
-    display: flex;
-  }
+    nav {
+        padding: 5vw 5vw;
+        background-color: #0d0d0d;
+    }
 
-  #nav-part2 {
+    nav img {
+        transition: all ease 0.2s;
+        height: 2.5vh;
+        padding-top: 1vw;
+    }
+    #nav-part2 {
     display: none;
+  }
+     #hamburger {
+    display: flex;
   }
 }

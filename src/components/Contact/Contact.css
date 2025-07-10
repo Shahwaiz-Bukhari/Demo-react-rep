@@ -34,7 +34,7 @@
   }
 }
 
-p {
+.content p {
   font-size: 1.125rem;
   margin: 20px 0;
   max-width: 800px;
@@ -199,6 +199,47 @@ button:focus {
   flex-direction: column;
   width: 100%;
 }
+@media (min-width: 1440px) {
+  .container{
+    padding-top: 25px;
+  }
+
+}
+
+@media (min-width: 2048px) {
+  .container{
+    padding-top: 99px;
+  }
+  .content h1{
+    font-size: 5rem;
+  }
+  .content p{
+    font-size: 1.7rem ;
+  }
+  .visit-us h2{
+    font-size: 2rem;
+  }
+  .contact-form h3{
+    font-size: 1.9rem;
+  }
+  .visit-us li{
+    font-size: 1.3rem;
+  }
+  .input-row input{
+    font-size: 1.3rem;
+  }
+  .input-wrapper textarea{
+    font-size: 1.4rem;
+  }
+  button{
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 1439px) {
+  .container{
+    height:58vh;
+  }
+}
 
 
 @media (max-width: 768px) {
@@ -208,7 +249,7 @@ button:focus {
     background: #0d0d0d;
   }
 
-p {
+.content p {
   margin: 20px 20px;
 }
 

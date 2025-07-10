@@ -108,6 +108,45 @@
     opacity: 1;
   }
 }
+@media (min-width: 1440px) {
+  .studio-page{
+    padding-top: 65px;
+  }
+  
+}
+@media (min-width: 2048px) {
+  .studio-page{
+    padding-top: 190px ;
+  }
+  .studio-title{
+    font-size: 5rem;
+  }
+  .studio-subtitle{
+    font-size: 2rem;
+  }
+  .about-title{
+    font-size: 2.5rem;
+  }
+  .about-description{
+    font-size: 1.7rem;
+  }
+  .team-title{
+    font-size: 2.5rem;
+  }
+  .team-member-name{
+    font-size: 1.9rem;
+  }
+  .team-member-role{
+    font-size: 1.7rem;
+  }
+  
+}
+@media (max-width: 1439px) {
+  .studio-header{
+    margin-top: 35px;
+  }
+  
+}
 @media (max-width: 768px) {
   .about-section,
   .team-section{

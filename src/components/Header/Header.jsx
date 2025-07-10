@@ -22,6 +22,7 @@ export default function Header() {
         <img
           src={logo}
           alt="Bricksol logo"
+          className="logo-img"
           style={{ cursor: 'pointer' }}
         />
       </NavLink>
