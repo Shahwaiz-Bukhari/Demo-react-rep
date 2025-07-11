@@ -45,7 +45,7 @@
 .backing {
   max-width: 120%;
   height: auto;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   padding-bottom: 50px;
   background-color: #0d0d0d;
 }

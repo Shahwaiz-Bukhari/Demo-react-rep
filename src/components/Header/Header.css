@@ -100,9 +100,9 @@ nav.scrolled {
   
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 2048px) {
   .nav-link{
-    font-size: 35px;
+    font-size: 30px;
   }
   .logo-img{
     width: 12vw;

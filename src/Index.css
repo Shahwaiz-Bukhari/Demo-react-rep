@@ -29,6 +29,7 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'neu', sans-serif;
+    background: #0d0d0d;
 }
 
 #main {

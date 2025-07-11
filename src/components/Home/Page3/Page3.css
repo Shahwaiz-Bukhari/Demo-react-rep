@@ -130,3 +130,9 @@
     margin-bottom: 100px;
   }
 }
+@media (min-width:2048px) {
+  #page3{
+    padding-bottom: 0;
+  }
+  
+}
