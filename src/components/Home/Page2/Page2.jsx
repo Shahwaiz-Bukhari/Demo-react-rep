@@ -44,7 +44,8 @@ export default function Page2() {
       </div>
       
       <div id="tabs-section">
-        <div className="tabs-left">
+        <div className='container'>
+          <div className="tabs-left">
           {data.map((item, index) => (
             <h2
               key={index}
@@ -58,6 +59,7 @@ export default function Page2() {
         </div>
         <div className="tabs-right">
           <img src={data[activeIndex].image} alt={data[activeIndex].title} />
+        </div>
         </div>
       </div>
     </section>

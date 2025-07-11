@@ -166,7 +166,10 @@
 }
 @media (min-width:1500px) {
   #tabs-section {
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 0fr;
+  }
+  #tabs-section .container{
+    padding: 0;
   }
   
 }

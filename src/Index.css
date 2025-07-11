@@ -36,7 +36,6 @@ html, body {
     position: relative;
     z-index: 10;
 }
-
 #full-scr {
     height: 100vh;
     width: 100%;
@@ -53,6 +52,13 @@ html, body {
     background-color: transparent;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2vw;
+  box-sizing: border-box;
 }
 
 #loader {
