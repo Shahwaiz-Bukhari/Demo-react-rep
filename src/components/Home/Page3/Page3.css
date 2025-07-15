@@ -12,7 +12,13 @@
   margin: auto;
 }
 
+.tile-row {
+  display: flex;
+  gap: 20px;
+}
+
 .tile {
+  flex: 1;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -20,12 +26,19 @@
   background-size: cover;
   background-position: center;
   height: 300px;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: flex 0.5s ease, filter 0.4s ease;
+  z-index: 1;
 }
 
-.tile:hover {
-  transform: scale(1.02);
+.tile-hovered {
+  flex: 2;
+  z-index: 2;
   filter: brightness(1.1);
+}
+
+.tile-shrink {
+  flex: 1;
+  filter: brightness(0.9);
 }
 
 .tile-flare {
@@ -43,11 +56,10 @@
   );
   transform: skewX(-20deg);
   pointer-events: none;
-  transition: none;
   z-index: 2;
 }
 
-.tile:hover .tile-flare {
+.tile-hovered .tile-flare {
   animation: flareMove 1s ease forwards;
 }
 
@@ -87,21 +99,9 @@
   transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
 }
 
-.tile:hover .tile-overlay p {
+.tile-hovered .tile-overlay p {
   opacity: 1;
   transform: translateY(0);
-}
-
-.large-tile {
-  flex: 2;
-}
-.small-tile {
-  flex: 1;
-}
-
-.tile-row {
-  display: flex;
-  gap: 20px;
 }
 
 @media (max-width: 768px) {
@@ -109,14 +109,12 @@
     flex-direction: column;
   }
 
-  .tile {
-    height: 220px;
-  }
-
-  .large-tile,
-  .small-tile {
+  .tile,
+  .tile-hovered,
+  .tile-shrink {
     flex: none;
     width: 100%;
+    height: 220px;
   }
 
   .tile-overlay h2 {
@@ -125,14 +123,13 @@
 }
 
 @media (max-width: 480px) {
-
   .tile-overlay h2 {
     margin-bottom: 100px;
   }
 }
-@media (min-width:2048px) {
-  #page3{
+
+@media (min-width: 2048px) {
+  #page3 {
     padding-bottom: 10px;
   }
-  
 }

@@ -1,0 +1,107 @@
+.cta-container {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.cta-bubble {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 50% 50% 60% 50% / 50% 50% 70% 50%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.4s ease;
+}
+
+
+.cta-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.cta-bubble.open {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cta-panel {
+  width: 100%;
+  color: white;
+}
+
+.cta-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.cta-panel h3 {
+  margin: 20px 0 10px;
+  font-size: 1.2rem;
+}
+
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-form input,
+.chat-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.chat-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.chat-form button {
+  background-color: #0737E3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-form button:hover {
+  background-color: #021b8d;
+}
+
+@media (max-width: 768px) {
+  .cta-container {
+    right: 15px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .cta-bubble.open {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}

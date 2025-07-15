@@ -120,23 +120,36 @@
     margin-right: 25%;
   }
   #hero-1 {
-    margin-top: 75px;
+    margin-top: 120px;
+    width: 85%;
+    height: 170%;
   }
-  #hero-2 {
+  #hero-2, #hero-3 {
     margin-top: 70px;
-  }
-  #hero-3 {
-    margin-top: 70px;
+    display: none;
   }
   #right h1{
     font-size: 8rem;
-    line-height: 5vw;
-    padding-top: 100px;
+    line-height: 8vw;
+    padding-bottom: 200px;
+    text-align: justify;
 
   }
-  #left h3 {
-    font-size: 1.5vw;
+#left h3 {
+        font-size: 2rem;
+        line-height: 3.5vw;
+        width: 40vw;
+ }
+}
+@media (min-width: 2048px) {
+    #right h1{
+        line-height: 5vw;
+    }
+     #left h3 {
+    font-size: 3rem;
+    line-height: 1.5vw;
   }
+    
 }
 
 @media (max-width: 1439px) {
@@ -170,7 +183,7 @@
   }
 
   #center {
-    height: 102vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -186,16 +199,17 @@
   #left h3 {
     padding-top: 12px;
     width: 80%;
-    font-size: 5.5vw;
+    font-size: 5vw;
     line-height: 6vw;
     color: #EFEAE3;
   }
 
   #right h1 {
-    font-size: 17vw;
+    font-size: 13vw;
     text-align: justify;
-    line-height: 15vw;
+    line-height: 13vw;
     color: #EFEAE3;
+    padding-top: 110px;
   }
 
   #page1 video {
@@ -212,11 +226,11 @@
 
 @media (max-width: 480px) {
   #center {
-    height: 73vh;
+    height: 45vh;
   }
 
   #right h1 {
-    padding-top: 30px;
+    padding-top: 75px;
     font-size: 15vw;
   }
 

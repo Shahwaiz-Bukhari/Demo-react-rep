@@ -75,6 +75,8 @@
 #footer-bottom a:hover {
   color: #0737e3;
 }
+
+
 @media (min-width: 2048px) {
     #footer-bottom p{
     font-size: 1.9rem;

@@ -60,7 +60,7 @@ export default function ContactSection() {
 
   return (
     <>
-      <div className="container">
+      <div className="cont">
         <div className="content">
           <h1>Contact us</h1>
           <p>
@@ -76,6 +76,7 @@ export default function ContactSection() {
       />
 
       <section className="backing">
+        <div className="container">
         <div className="contact-container" aria-label="Contact section">
           <div className="visit-us">
             <h2>Visit Us</h2>
@@ -132,6 +133,7 @@ export default function ContactSection() {
         </div>
         <div className="maps">
           <NightMap />
+        </div>
         </div>
       </section>
     </>

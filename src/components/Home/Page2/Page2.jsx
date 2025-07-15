@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Page2.css';
 import imgDesign from '/images/design.jpg';
 import imgProject from '/images/project.jpg';
@@ -27,6 +27,18 @@ const data = [
 
 export default function Page2() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth > 1024);
+    };
+
+    checkScreenSize(); 
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   return (
     <section id="page2" data-scroll-section>
@@ -42,24 +54,32 @@ export default function Page2() {
           </div>
         ))}
       </div>
-      
-      <div id="tabs-section">
-        <div className='container'>
+
+      <div className="container">
+        <div id="tabs-section">
           <div className="tabs-left">
-          {data.map((item, index) => (
-            <h2
-              key={index}
-              className={activeIndex === index ? 'active' : ''}
-              onClick={() => setActiveIndex(index)}
-            >
-              {item.title}
-            </h2>
-          ))}
-          <p className="tab-description">{data[activeIndex].description}</p>
-        </div>
-        <div className="tabs-right">
-          <img src={data[activeIndex].image} alt={data[activeIndex].title} />
-        </div>
+            {data.map((item, index) => (
+              <h2
+                key={index}
+                className={activeIndex === index ? 'active' : ''}
+                onClick={() => {
+                  if (!isDesktop) setActiveIndex(index);
+                }}
+                onMouseEnter={() => {
+                  if (isDesktop) setActiveIndex(index);
+                }}
+              >
+                {item.title}
+              </h2>
+            ))}
+            <p className="tab-description">{data[activeIndex].description}</p>
+          </div>
+          <div className="tabs-right">
+            <img
+              src={data[activeIndex].image}
+              alt={data[activeIndex].title}
+            />
+          </div>
         </div>
       </div>
     </section>

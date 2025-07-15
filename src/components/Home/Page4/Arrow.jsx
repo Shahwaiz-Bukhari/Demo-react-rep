@@ -49,6 +49,7 @@ export default function SwipeLeftHint() {
         @media (max-width: 696px) {
           .swipe-hint {
             font-size: 1.3rem;
+            bottom: 10%;
           }
 
           .arrow {
@@ -57,7 +58,7 @@ export default function SwipeLeftHint() {
         }
           @media (max-width: 480px){
           .swipe-hint {
-           bottom: 13%;
+           bottom: 10%;
           }
         }
       `}</style>

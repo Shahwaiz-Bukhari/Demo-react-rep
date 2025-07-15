@@ -4,14 +4,14 @@ import './Studio.css';
 
 function Studio() {
   return (
-    <div className="studio-page container">
+    <div className="studio-page">
       <header className="studio-header">
         <h1 className="studio-title">Our Studio</h1>
         <p className="studio-subtitle">
           Meet the creative minds behind our projects and learn about our mission.
         </p>
       </header>
-
+      <div className="container">
       <main className="studio-content" role="main" aria-label="Studio Information">
         <section className="about-section">
           <h2 className="about-title">About Us</h2>
@@ -57,6 +57,7 @@ function Studio() {
           </div>
         </section>
       </main>
+      </div>
     </div>
   );
 }

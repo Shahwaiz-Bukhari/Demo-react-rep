@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Page3.css';
 import imgARVR from '/images/arvr.jpg';
 import imgAnimations from '/images/animations.jpg';
@@ -18,8 +18,9 @@ const projects = [
   { title: 'Virtual Production', img: imgVirtual, desc: 'Advanced filming with real-time virtual sets.' },
 ];
 
-
 export default function Page3() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const rows = [];
   for (let i = 0; i < projects.length; i += 2) {
     rows.push(projects.slice(i, i + 2));
@@ -28,36 +29,31 @@ export default function Page3() {
   return (
     <section id="page3" data-scroll-section>
       <div className="flex-container">
-        {rows.map((row, rowIndex) => {
-          const isEvenRow = rowIndex % 2 === 1;
-          return (
-            <div className="tile-row" key={rowIndex}>
-              {row.map((tile, tileIndex) => {
-                const isLeft = tileIndex === 0;
-                const tileClass =
-                  isEvenRow
-                    ? isLeft ? 'small-tile' : 'large-tile'
-                    : isLeft ? 'large-tile' : 'small-tile';
+        {rows.map((row, rowIndex) => (
+          <div className="tile-row" key={rowIndex}>
+            {row.map((tile, tileIndex) => {
+              const globalIndex = rowIndex * 2 + tileIndex;
+              const isHovered = hoveredIndex === globalIndex;
 
-                return (
-                  <div
-                    key={tile.title}
-                    className={`tile ${tileClass}`}
-                    style={{ backgroundImage: `url(${tile.img})` }}
-                  >
-                    <div className="tile-flare" />
-                    <div className="tile-overlay">
-                      <h2>{tile.title}</h2>
-                      <p>{tile.desc}</p>
-                    </div>
+              return (
+                <div
+                  key={tile.title}
+                  className={`tile ${isHovered ? 'tile-hovered' : hoveredIndex !== null ? 'tile-shrink' : ''}`}
+                  style={{ backgroundImage: `url(${tile.img})` }}
+                  onMouseEnter={() => setHoveredIndex(globalIndex)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div className="tile-flare" />
+                  <div className="tile-overlay">
+                    <h2>{tile.title}</h2>
+                    <p>{tile.desc}</p>
                   </div>
-                );
-              })}
-            </div>
-          );
-        })}
+                </div>
+              );
+            })}
+          </div>
+        ))}
       </div>
     </section>
   );
 }
-

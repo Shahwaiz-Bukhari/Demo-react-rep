@@ -80,7 +80,7 @@
   font-size: 1vw;
   line-height: 1.6vw;
   color: #ccc;
-  max-width: 90%;
+  max-width: 100%;
   transition: opacity 0.4s ease;
 }
 
@@ -93,6 +93,10 @@
   border-radius: 10px;
   object-fit: cover;
   transition: opacity 0.5s ease;
+}
+.tabs-left h2:hover {
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 @media (max-width: 1024px) {
@@ -166,7 +170,7 @@
 }
 @media (min-width:1500px) {
   #tabs-section {
-  grid-template-columns: 1fr 0fr;
+  grid-template-columns: 1fr 2fr;
   }
   #tabs-section .container{
     padding: 0;

@@ -1,4 +1,4 @@
-.container {
+.cont {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,14 +200,14 @@ button:focus {
   width: 100%;
 }
 @media (min-width: 1440px) {
-  .container{
+  .cont{
     padding-top: 25px;
   }
 
 }
 
 @media (min-width: 2048px) {
-  .container{
+  .cont{
     padding-top: 99px;
   }
   .content h1{
@@ -236,7 +236,7 @@ button:focus {
   }
 }
 @media (max-width: 1439px) {
-  .container{
+  .cont{
     height:58vh;
   }
 }

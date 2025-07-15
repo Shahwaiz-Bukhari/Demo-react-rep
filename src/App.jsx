@@ -9,6 +9,7 @@ import Contact from './components/Contact/Contact';
 import Work from './components/Work/Work';
 import Studio from './components/Studio/Studio';
 import NotFound from './components/Error/NotFound';
+import CtaBubble from './components/Cta/CtaBubble';
 import './Index.css';
 // import 'locomotive-scroll/dist/locomotive-scroll.css';
 import {
@@ -58,6 +59,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CtaBubble />
       </main>
       <Footer />
     </Router>
