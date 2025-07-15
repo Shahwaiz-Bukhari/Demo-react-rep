@@ -141,42 +141,79 @@
         width: 40vw;
  }
 }
+
 @media (min-width: 2048px) {
-    #center {
-    position: relative;
+  #center {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+    gap: 2rem;
+    padding-top: 8rem;
   }
 
   #right {
-    position: absolute;
-    top: 0;
-    left: 0;
+    order: 0;
     width: 100%;
+    text-align: center;
   }
 
   #right h1 {
-    text-align: left;
     font-size: 6rem;
-    line-height: 6.5rem;
-    padding: 0 2vw;
-    padding-top: 170px;
+    line-height: 2.5rem;
+    text-align: center;
+    white-space: nowrap;
+
+  }
+
+  #right h1 br:nth-of-type(1) {
+    display: none;
+  }
+
+  #right h1 br:nth-of-type(2) {
+    display: inline;
+  }
+
+  #right h1::before {
+    content: "SPACES THAT";
+    display: block;
+  }
+
+  #right h1::after {
+    content: "INSPIRE";
+    display: block;
+  }
+
+
+  #right h1 {
+    color: transparent;
+    position: relative;
+    top: 175px;
+  }
+
+  #right h1::before,
+  #right h1::after {
+    color: #EFEAE3;
+    position: relative;
+    z-index: 2;
   }
 
   #left {
-    margin-top: 10rem; 
-    padding: 0 2vw;
+    order: 1;
+    width: 100%;
+    text-align: center;
   }
 
   #left h3 {
-    font-size: 2.8rem;
-    line-height: 1.5;
-    width: 45vw;
-    padding-top: 365px;
+    font-size: 2.2rem;
+    width: 50vw;
+    line-height: 1.6;
+    margin-top: 2rem;
+    text-align: center;
   }
-    
 }
+
+
+ 
 
 @media (max-width: 1439px) {
   #center {
