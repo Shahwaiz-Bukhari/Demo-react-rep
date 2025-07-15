@@ -35,22 +35,27 @@ export default function WaterDropCTA() {
     }
   }, [open]);
 
-   if (location.pathname === '/contact') return null;
+  if (location.pathname === '/contact') return null;
 
   return (
     <div className="cta-container">
       <div
         className={`cta-bubble ${open ? 'open' : ''}`}
         ref={bubbleRef}
-        onClick={() => setOpen(!open)}
       >
+    
         {!open && (
-          <div className="cta-icon">
+          <div className="cta-icon" onClick={() => setOpen(true)}>
             <img src="/images/finger.png" alt="CTA Icon" />
           </div>
         )}
+
         {open && (
-          <div className="cta-panel" ref={panelRef}>
+          <div
+            className="cta-panel"
+            ref={panelRef}
+            onClick={(e) => e.stopPropagation()} 
+          >
             <button className="cta-close" onClick={() => setOpen(false)}>
               ✖
             </button>
