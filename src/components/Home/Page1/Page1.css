@@ -142,12 +142,38 @@
  }
 }
 @media (min-width: 2048px) {
-    #right h1{
-        line-height: 5vw;
-    }
-     #left h3 {
-    font-size: 3rem;
-    line-height: 1.5vw;
+    #center {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #right h1 {
+    text-align: left;
+    font-size: 6rem;
+    line-height: 6.5rem;
+    padding: 0 2vw;
+    padding-top: 170px;
+  }
+
+  #left {
+    margin-top: 10rem; 
+    padding: 0 2vw;
+  }
+
+  #left h3 {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    width: 45vw;
+    padding-top: 365px;
   }
     
 }
